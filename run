@@ -1,4 +1,5 @@
 #!/bin/sh
+#semodule -i docker-openvpn.pp
 docker run -d \
   -v /srv/docker/openvpn/etc/openvpn:/etc/openvpn:Z \
   -p 1194:1194/udp \

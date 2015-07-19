@@ -1,1 +1,4 @@
+checkmodule -M -m -o docker-openvpn.mod docker-openvpn.te
+semodule_package -o docker-openvpn.pp -m docker-openvpn.mod
+
 docker build -t neingeist/openvpn .
