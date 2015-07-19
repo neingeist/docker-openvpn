@@ -1,0 +1,3 @@
+DEV=docker0
+CONTAINER_NAME=openvpn
+NETV6=2a01:dead:abcd:cafe:beef::/80
