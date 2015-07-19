@@ -174,7 +174,7 @@ status /tmp/openvpn-status.log
 client-config-dir $OPENVPN/ccd
 
 user nobody
-group nogroup
+group nobody
 EOF
 
 
