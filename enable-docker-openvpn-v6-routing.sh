@@ -26,4 +26,5 @@ container_pid=`docker inspect -f '{{.State.Pid}}' $CONTAINER_NAME`
 nsenter --target $container_pid --mount --uts --ipc --net --pid \
     /bin/sh -c '/usr/bin/mount /proc/sys -o remount,rw;
                 /usr/sbin/sysctl -q net.ipv6.conf.all.forwarding=1;
-                /usr/bin/mount /proc/sys -o remount,ro'
+                /usr/bin/mount /proc/sys -o remount,ro;
+                /usr/bin/mount /proc -o remount,rw # restore rw on /proc'
